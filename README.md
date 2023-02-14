@@ -4,6 +4,8 @@
 
 - Leaving other options open to individual preference.
 
+##### Devise primary model
+
 After setting devise model (rails g devise Model/User/Account) add the :api module to the model [https://github.com/nejdetkadir/devise-api]
 
 Example controller with standard and restricted methods
@@ -23,6 +25,7 @@ end
 end
 
 - Ruby version
+  3.1.2
 
 - System dependencies
 
