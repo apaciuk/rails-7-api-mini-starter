@@ -2,7 +2,7 @@
 
 ##### Rails 7 API Starter with user Devise-Api Auth and just enough essential configuration options, with UUId's/RSpec, as api/v1
 
-- Leaving other options open to individual preference.
+- Leaving all other options open to individual preference.
 
 ##### Set Devise primary model
 
