@@ -1,6 +1,6 @@
 # rails-7-api-starter
 
-##### Rails 7 API Starter with user Devise-Api Auth and just enough essential configuration options, with UUId's/RSpec
+##### Rails 7 API Starter with user Devise-Api Auth and just enough essential configuration options, with UUId's/RSpec, as api/v1
 
 - Leaving other options open to individual preference.
 
@@ -37,6 +37,6 @@ Deployment instructions, setup
 - rails g devise Model - check/adjust migrations
 - rails db:migrate
 - Place :api module in relevent model
-- Set controller code for restricted, example above
+- Set controller code for restricted, example above, with your controller in api/v1
 
 - Build API!
