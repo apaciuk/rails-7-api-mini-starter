@@ -1,12 +1,12 @@
 # rails-7-api-starter
 
-##### Rails 7 API Starter with user Devise-Api Auth and just enough essential configuration options, with UUId's
+##### Rails 7 API Starter with user Devise-Api Auth and just enough essential configuration options, with UUId's/RSpec
 
 - Leaving other options open to individual preference.
 
-##### Devise primary model
+##### Set Devise primary model
 
-After setting devise model (rails g devise Model/User/Account) add the :api module to the model [https://github.com/nejdetkadir/devise-api]
+After setting devise model (rails g devise Model/User/Account) add the :api module to the created model [https://github.com/nejdetkadir/devise-api] and any other options needed.
 
 Example controller with standard and restricted methods
 
@@ -24,19 +24,19 @@ render json: { message: 'You are not logged in' }, status: :unauthorized
 end
 end
 
-- Ruby version
+###### RSpec
+
+- Configured with RSpec and generators, FactoryBot
+
+* Ruby version
   3.1.2
 
-- System dependencies
+Deployment instructions, setup
 
-- Configuration
+- rails db:create
+- rails g devise Model - check/adjust migrations
+- rails db:migrate
+- Place :api module in relevent model
+- Set controller code for restricted, example above
 
-- Database creation
-
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
+- Build API!
