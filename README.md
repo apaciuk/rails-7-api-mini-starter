@@ -24,9 +24,9 @@ render json: { message: 'You are not logged in' }, status: :unauthorized
 end
 end
 
-###### RSpec
+###### RSpec/Services
 
-- Configured with RSpec and generators, FactoryBot
+- Configured with RSpec and generators, FactoryBot, CORs and base ApplicationService
 
 * Ruby version
   3.1.2
@@ -38,5 +38,9 @@ Deployment instructions, setup
 - rails db:migrate
 - Place :api module in relevent model
 - Set controller code for restricted, example above, with your controller in api/v1
+
+* Server
+
+- rails s -p 3000 (or other)
 
 - Build API!
