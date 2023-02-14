@@ -1,24 +1,41 @@
-# README
+# rails-7-api-starter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### Rails 7 API Starter with user Devise-Api Auth and just enough essential configuration options.
 
-Things you may want to cover:
+- Leaving other options open to individual preference.
 
-* Ruby version
+After setting devise model (rails g devise Model) add the :api module to the model [https://github.com/nejdetkadir/devise-api]
 
-* System dependencies
+Example controller with standard and restricted methods
 
-* Configuration
+skip_before_action :verify_authenticity_token, raise: false
+before_action :authenticate_devise_api_token!, only: [:restricted]
+def home
+end
 
-* Database creation
+# /pages/restricted
 
-* Database initialization
+def restricted
+devise_api_token = current_devise_api_token
+if devise_api_token
+render json: { message: "You are logged in as #{devise_api_token.resource_owner.email}" }, status: :ok
+else
+render json: { message: 'You are not logged in' }, status: :unauthorized
+end
+end
 
-* How to run the test suite
+- Ruby version
 
-* Services (job queues, cache servers, search engines, etc.)
+- System dependencies
 
-* Deployment instructions
+- Configuration
 
-* ...
+- Database creation
+
+- Database initialization
+
+- How to run the test suite
+
+- Services (job queues, cache servers, search engines, etc.)
+
+- Deployment instructions
