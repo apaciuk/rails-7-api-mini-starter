@@ -31,7 +31,9 @@ module ApiStarter
     g.helper_specs false
     g.orm :active_record, primary_key_type: :uuid
     g.orm :active_record, foreign_key_type: :uuid
-    end
+    end 
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore, key: '_namespace_key'
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
