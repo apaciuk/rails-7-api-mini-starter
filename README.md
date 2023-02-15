@@ -69,3 +69,5 @@ POST /api/v1/users(.:format) devise/registrations#create
 
 pages_home GET /api/v1/pages/home(.:format) pages#home
 pages_restricted GET /api/v1/pages/restricted(.:format) pages#restricted
+
+- Todo fix user sign-out
